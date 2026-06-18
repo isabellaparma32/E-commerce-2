@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fogo da Fé</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>FOGO DA FÉ</h1>
+        <section class="hero">
+            <h2>Bem-vindo ao Fogo da Fé</h2>
+            <p>Produtos que mantêm viva a chama da fé em seu coração</p>
+        </section>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#contato">Contato</a>
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+        <div class="user-area">
+            <span id="nomeUser"></span>
+            <button onclick="sair()">Sair</button>
+        </div>
+    </header>
+
+    <input type="text" id="busca" placeholder="Buscar produto...">
+
+
+    <div id="tela-apresentacao">
+        <div class="intro-content">
+            <div class="fogo-animado">🔥</div>
+            <h1>FOGO DA FÉ</h1>
+            <p>"O SENHOR é a minha luz e a minha salvação; de quem terei medo?" — Salmo 27:1</p>
+            <button onclick="entrarNaLoja()">Entrar na Loja</button>
+        </div>
+    </div>
+
+    <div id="conteudo-principal" style="display: none;">
+    </div>
+
+    <section class="produtos" id="produtos">
+        <div class="card">
+            <img src="imagens/terco1.jpg" alt="Terço São Bento">
+            <h3>Terço São Bento</h3>
+            <p>R$ 70,00</p>
+            <button onclick="add('Terço São Bento')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/biblia1.jpg" alt="Bíblia Pastoral">
+            <h3>Bíblia Pastoral</h3>
+            <p>R$ 45,67</p>
+            <button onclick="add('Bíblia Pastoral')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/vela.jpg" alt="Vela Santa Luzia">
+            <h3>Vela Santa Luzia</h3>
+            <p>R$ 9,90</p>
+            <button onclick="add('Vela Santa Luzia')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/img NS das dores.png" alt="Imagem Nossa Senhora das Dores">
+            <h3>Imagem Nossa Senhora das Dores</h3>
+            <p>30cm</p>
+            <p> R$293,76</p>
+            <button onclick="add('Imagem Nossa Senhora das Dores')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/Medalha NS das graças.png" alt="Medalha Milagrosa">
+            <h3>Medalha Milagrosa</h3>
+            <p>R$ 29,90</p>
+            <button onclick="add('Medalha Milagrosa')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/crucifixo.webp" alt="Crucifixo">
+            <h3>Crucifixo</h3>
+            <p>R$ 39,90</p>
+            <button onclick="add('Crucifixo')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/incenso de NS aparecida.png" alt="Incenso Nossa Senhora Aparecida">
+            <h3>Incenso Nossa Senhora Aparecida</h3>
+            <p>R$122,80</p>
+            <button onclick="add('Incenso Nossa Senhora Aparecida')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/terco2.png" alt="Terço Santa Rita de Cassia">
+            <h3>Terço Santa Rita de Cassia</h3>
+            <p>R$ 69,70</p>
+            <button onclick="add('Terço Santa Rita de Cassia')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/biblia2.webp" alt="Bíblia Ave Maria">
+            <h3>Bíblia Ave Maria - Capa Flores</h3>
+            <p>R$ 95,84</p>
+            <button onclick="add('Bíblia Ave Maria')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/catecismo.png" alt="Catecismo da Igreja Católica">
+            <h3>Catecismo da Igreja Católica</h3>
+            <p>R$ 73,71</p>
+            <button onclick="add('Catecismo da Igreja Catolica')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/Tratado.webp" alt="Livro do tratado da verdadeira devoção">
+            <h3>Livro do tratado da verdadeira devoção À Santíssima Virgem</h3>
+            <p>R$ 16,73</p>
+            <button onclick="add('Livro do tratado da verdadeira devoção À Santíssima Virgem')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/Camiseta.png" alt="Camiseta Sagrado Coração de Jesus">
+            <h3>Camiseta Sagrado Coração de Jesus</h3>
+            <p>R$ 49,90</p>
+            <button onclick="add('Camiseta Sagrado Coração')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/chaveiro.jpg" alt="Chaveiro Emborrachado Imaculado Coração de Maria">
+            <h3>Chaveiro Emborrachado Imaculado Coração de Maria</h3>
+            <p>R$ 2,90</p>
+            <button onclick="add('Chaveiro Emborrachado Imaculado Coração de Maria')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/Porta agua benta.png" alt="">
+            <h3>Porta água benta DIVINO ESPIRITO SANTO</h3>
+            <p>R$ 137,90</p>
+            <button onclick="add('Porta água benta DIVINO ESPIRITO SANTO')">🛒 Adicionar</button>
+        </div>
+
+        <div class="card">
+            <img src="imagens/camiseta2.webp" alt="Camiseta de São José">
+            <h3>Camiseta de São José</h3>
+            <p>R$ 60,00</p>
+            <button onclick="add('Camiseta de São José')">🛒 Adicionar</button>
+        </div>
+    </section>
+
+    <section id="categorias-produtos">
+
+        <h2>Categorias</h2>
+
+        <div class="botoes-categorias">
+            <button onclick="mostrar('tercos')">📿 Terços</button>
+            <button onclick="mostrar('santos')">🙏 Imagens de Santos</button>
+        </div>
+
+        <div id="tercos" class="categoria ativa">
+
+            <div class="card">
+                <img src="imagens/terco1.jpg" alt="Terço São Bento">
+                <h3>Terço São Bento</h3>
+                <p>R$ 70,00</p>
+                <button onclick="add('Terço São Bento')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/terco2.png" alt="Terço Santa Rita">
+                <h3>Terço Santa Rita de Cássia</h3>
+                <p>R$ 69,70</p>
+                <button onclick="add('Terço Santa Rita de Cássia')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/terco10.webp" alt="Terço São Miguel Arcanjo">
+                <h3>Terço São Miguel Arcanjo</h3>
+                <p>R$ 79,90</p>
+                <button onclick="add('Terço São Miguel Arcanjo')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/terco4.png" alt="Terço Santa Teresinha">
+                <h3>Terço Santa Teresinha</h3>
+                <p>R$ 57,00</p>
+                <button onclick="add('Terço Santa Teresinha')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/terco6.png" alt="Coroa Nossa Senhora das Lágrimas">
+                <h3>Coroa Nossa Senhora das Lágrimas</h3>
+                <p>R$ 21,90</p>
+                <button onclick="add('Coroa Nossa Senhora das Lágrimas')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/terco7.webp" alt="Terço São Jorge">
+                <h3>Terço São Jorge</h3>
+                <p>R$ 79,90</p>
+                <button onclick="add('Terço São Jorge')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/terco8.webp" alt="Terço São Jorge">
+                <h3>Terço De Santo Expedito</h3>
+                <p>R$ 85,00</p>
+                <button onclick="add('Terço São Jorge')">🛒 Adicionar</button>
+            </div>
+
+        </div>
+
+        <div id="santos" class="categoria">
+
+            <div class="card">
+                <img src="imagens/img NS das dores.png" alt="Nossa Senhora das Dores">
+                <h3>Nossa Senhora das Dores</h3>
+                <p>R$ 293,76</p>
+                <p>30cm</p>
+                <button onclick="add('Nossa Senhora das Dores')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/imagem SANTO ANTONIO.png" alt="Santo Antônio">
+                <h3>Santo Antônio</h3>
+                <p>R$357,90</p>
+                <p>30cm</p>
+                <button onclick="add('Santo Antônio')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/imagem SAGRADO CORÇÃO DE JESUS E MARIA.png" alt="Sagrado coração de JESUS E MARIA">
+                <h3>Sagrado coração de JESUS E MARIA</h3>
+                <p>R$ 259,90 </p>
+                <p>22cm</p>
+                <button onclick="add('Sagrado coração de JESUS E MARIA')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/imagem PADRE PIO.png" alt="São Bento">
+                <h3>Padre Pio de Pietrelcina</h3>
+                <p>R$ 274,90</p>
+                <p>30cm</p>
+                <button onclick="add('Padre Pio de Pietrelcina')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/imagem NS DE GUARDALUPE.png" alt="Nossa Senhora de Guardalupe">
+                <h3>NOSSA SENHORA DE GUARDALUPE </h3>
+                <p>R$ 119,90</p>
+                <p>15cm</p>
+                <button onclick="add('NOSSA SENHORA DE GUARDALUPE')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/imagem SÃO BENTO.png" alt="São Bento">
+                <h3>São Bento</h3>
+                <p>R$ 250,00</p>
+                <p>30cm</p>
+                <button onclick="add('Imagem São Bento')">🛒 Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/imagem SÃO FRANCISCO.png" alt="São Francisco de Assis">
+                <h3>São Francisco de Assis</h3>
+                <p>R$ 89,90</p>
+                <p>20cm</p>
+                <button onclick="add('São Francisco de Assis')">🛒 Adicionar</button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <button class="btn-carrinho">
+        🛒 <span id="contador">0</span>
+    </button>
+
+    <div class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="lista"></ul>
+        <p id="total">Total: R$ 0,00</p>
+        <button onclick="finalizar()">Finalizar Compra</button>
+    </div>
+
+    <section id="avaliacao-loja">
+        <h2>Avalie nossa loja</h2>
+        <label for="avaliacao">Informe sua avaliação (0 a 5):</label> <br><br>
+        <input type="number" id="avaliacao" min="0" max="5" placeholder="Sua nota">
+        <button onclick="avaliarProduto()">Enviar avaliação</button>
+        <button onclick="resetarAvaliacao()">Resetar avaliação</button>
+
+        <p id="resultado"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Fogo da Fé. Todos os direitos reservados.</p>
+        <div class="redes">
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">WhatsApp</a>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+
+</body>
+
+</html>
